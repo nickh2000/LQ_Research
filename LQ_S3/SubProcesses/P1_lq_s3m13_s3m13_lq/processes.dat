@@ -1,0 +1,8 @@
+1       mu- u > mu- u
+mirror  none
+2       mu- u > mu- c
+mirror  none
+3       mu- c > mu- u
+mirror  none
+4       mu- c > mu- c
+mirror  none

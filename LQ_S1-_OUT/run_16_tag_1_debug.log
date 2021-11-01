@@ -1,0 +1,298 @@
+#************************************************************
+#*               MadGraph5_aMC@NLO/MadEvent                 *
+#*                                                          *
+#*                *                       *                 *
+#*                  *        * *        *                   *
+#*                    * * * * 5 * * * *                     *
+#*                  *        * *        *                   *
+#*                *                       *                 *
+#*                                                          *
+#*                                                          *
+#*         VERSION 3.2.0                 2021-08-22         *
+#*                                                          *
+#*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+#*    https://server06.fynu.ucl.ac.be/projects/madgraph     *
+#*                                                          *
+#************************************************************
+#*                                                          *
+#*               Command File for MadEvent                  *
+#*                                                          *
+#*     run as ./bin/madevent.py filename                    *
+#*                                                          *
+#************************************************************
+generate_events run_17
+Traceback (most recent call last):
+  File "/home/nick/Desktop/LQ_Research/mg_root/madgraph/interface/extended_cmd.py", line 1544, in onecmd
+    return self.onecmd_orig(line, **opt)
+  File "/home/nick/Desktop/LQ_Research/mg_root/madgraph/interface/extended_cmd.py", line 1493, in onecmd_orig
+    return func(arg, **opt)
+  File "/home/nick/Desktop/LQ_Research/mg_root/madgraph/interface/madevent_interface.py", line 2354, in do_generate_events
+    switch_mode = self.ask_run_configuration(mode, args)
+  File "/home/nick/Desktop/LQ_Research/mg_root/madgraph/interface/madevent_interface.py", line 6164, in ask_run_configuration
+    self.ask_edit_cards(cards, plot=False, first_cmd=first_cmd)
+  File "/home/nick/Desktop/LQ_Research/mg_root/madgraph/interface/common_run_interface.py", line 1037, in ask_edit_cards
+    self.ask_edit_card_static(cards, mode, plot, self.options['timeout'],
+  File "/home/nick/Desktop/LQ_Research/mg_root/madgraph/interface/common_run_interface.py", line 1109, in ask_edit_card_static
+    out = ask(question, '0', possible_answer, timeout=int(1.5*timeout),
+  File "/home/nick/Desktop/LQ_Research/mg_root/madgraph/interface/extended_cmd.py", line 1112, in ask
+    question_instance = obj(question, allow_arg=choices, default=default,
+  File "/home/nick/Desktop/LQ_Research/mg_root/madgraph/interface/common_run_interface.py", line 4739, in __init__
+    new_vars = set(getattr(self, 'init_%s' % name)(cards))
+  File "/home/nick/Desktop/LQ_Research/mg_root/madgraph/interface/common_run_interface.py", line 4909, in init_run
+    self.update_block += [b.name for b in self.run_card.blocks]
+AttributeError: 'dict' object has no attribute 'blocks'
+                              Run Options    
+                              -----------    
+               stdout_level 	:	20 (user set)
+
+                         MadEvent Options    
+                         ----------------    
+     automatic_html_opening 	:	True
+        notification_center 	:	True
+                   run_mode 	:	2
+              cluster_queue 	:	None (user set)
+               cluster_time 	:	None (user set)
+               cluster_size 	:	100
+             cluster_memory 	:	100 (user set)
+                    nb_core 	:	12 (user set)
+          cluster_temp_path 	:	None
+
+                      Configuration Options    
+                      ---------------------    
+               pythia8_path 	:	/home/nick/Desktop/LQ_Research/mg_root/HEPTools/pythia8 (user set)
+                  hwpp_path 	:	None (user set)
+                thepeg_path 	:	None (user set)
+                 hepmc_path 	:	None (user set)
+           madanalysis_path 	:	None (user set)
+          madanalysis5_path 	:	/home/nick/Desktop/LQ_Research/mg_root/HEPTools/madanalysis5/madanalysis5 (user set)
+            pythia-pgs_path 	:	None (user set)
+                    td_path 	:	None (user set)
+               delphes_path 	:	/home/nick/Desktop/LQ_Research/mg_root/Delphes (user set)
+        exrootanalysis_path 	:	/home/nick/Desktop/LQ_Research/mg_root/ExRootAnalysis (user set)
+               syscalc_path 	:	None (user set)
+                     lhapdf 	:	/home/nick/Desktop/LQ_Research/mg_root/HEPTools/lhapdf6_py3/bin/lhapdf-config (user set)
+                 lhapdf_py2 	:	None
+                 lhapdf_py3 	:	/home/nick/Desktop/LQ_Research/mg_root/HEPTools/lhapdf6_py3/bin/lhapdf-config (user set)
+                    timeout 	:	60
+              f2py_compiler 	:	None
+          f2py_compiler_py2 	:	None
+          f2py_compiler_py3 	:	None
+                web_browser 	:	None
+                 eps_viewer 	:	None
+                text_editor 	:	None
+           fortran_compiler 	:	None
+               cpp_compiler 	:	None
+                auto_update 	:	7 (user set)
+               cluster_type 	:	condor
+      cluster_status_update 	:	(600, 30)
+           cluster_nb_retry 	:	1
+         cluster_local_path 	:	None
+         cluster_retry_wait 	:	300
+#************************************************************
+#*                     MadGraph5_aMC@NLO                    *
+#*                                                          *
+#*                *                       *                 *
+#*                  *        * *        *                   *
+#*                    * * * * 5 * * * *                     *
+#*                  *        * *        *                   *
+#*                *                       *                 *
+#*                                                          *
+#*                                                          *
+#*         VERSION 3.2.0                 2021-08-22         *
+#*                                                          *
+#*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+#*    https://server06.fynu.ucl.ac.be/projects/madgraph     *
+#*                                                          *
+#************************************************************
+#*                                                          *
+#*               Command File for MadGraph5_aMC@NLO         *
+#*                                                          *
+#*     run as ./bin/mg5_aMC  filename                       *
+#*                                                          *
+#************************************************************
+set group_subprocesses Auto
+set ignore_six_quark_processes False
+set low_mem_multicore_nlo_generation False
+set complex_mass_scheme False
+set include_lepton_initiated_processes False
+set gauge unitary
+set loop_optimized_output True
+set loop_color_flows False
+set max_npoint_for_channel 0
+set default_unset_couplings 99
+set max_t_for_channel 99
+set zerowidth_tchannel True
+set nlo_mixed_expansion True
+import model sm
+define p = g u c d s u~ c~ d~ s~
+define j = g u c d s u~ c~ d~ s~
+define l+ = e+ mu+
+define l- = e- mu-
+define vl = ve vm vt
+define vl~ = ve~ vm~ vt~
+tutorial
+import model MSSM_SLHA2
+define v = w+ w- z a
+set group_subprocesses Auto
+set ignore_six_quark_processes False
+set low_mem_multicore_nlo_generation False
+set complex_mass_scheme False
+set include_lepton_initiated_processes False
+set gauge unitary
+set loop_optimized_output True
+set loop_color_flows False
+set max_npoint_for_channel 0
+set default_unset_couplings 99
+set max_t_for_channel 99
+set zerowidth_tchannel True
+set nlo_mixed_expansion True
+import model sm
+define p = g u c d s u~ c~ d~ s~
+define j = g u c d s u~ c~ d~ s~
+define l+ = e+ mu+
+define l- = e- mu-
+define vl = ve vm vt
+define vl~ = ve~ vm~ vt~
+tutorial
+import model MSSM_SLHA2
+define v = w+ w- z a
+tutorial stop
+tutorial
+import model /home/nick/Desktop/LQ_Research/mg_root/models/LQ_S1_/NLO_\
+MODEL/NLO_LQ_S1_
+generate p mu- > s1tm43 j, ( s1tm43 > mu- j )
+output LQ_S1-_OUT
+######################################################################
+## PARAM_CARD AUTOMATICALY GENERATED BY MG5 FOLLOWING UFO MODEL   ####
+######################################################################
+##                                                                  ##
+##  Width set on Auto will be computed following the information    ##
+##        present in the decay.py files of the model.               ##
+##        See  arXiv:1402.1178 for more details.                    ##
+##                                                                  ##
+######################################################################
+
+###################################
+## INFORMATION FOR MASS
+###################################
+Block mass 
+    5 4.700000e+00 # MB 
+    6 1.720000e+02 # MT 
+   15 1.777000e+00 # MTA 
+   23 9.118760e+01 # MZ 
+   25 1.250000e+02 # MH 
+  9000005 6.500000e+02 # MS1t 
+## Dependent parameters, given by model restrictions.
+## Those values should be edited following the 
+## analytical expression. MG5 ignores those values 
+## but they are important for interfacing the output of MG5
+## to external program such as Pythia.
+  1 0.000000e+00 # d : 0.0 
+  2 0.000000e+00 # u : 0.0 
+  3 0.000000e+00 # s : 0.0 
+  4 0.000000e+00 # c : 0.0 
+  11 0.000000e+00 # e- : 0.0 
+  12 0.000000e+00 # ve : 0.0 
+  13 0.000000e+00 # mu- : 0.0 
+  14 0.000000e+00 # vm : 0.0 
+  16 0.000000e+00 # vt : 0.0 
+  21 0.000000e+00 # g : 0.0 
+  22 0.000000e+00 # a : 0.0 
+  24 7.982436e+01 # w+ : cmath.sqrt(MZ__exp__2/2. + cmath.sqrt(MZ__exp__4/4. - (aEW*cmath.pi*MZ__exp__2)/(Gf*sqrt__2))) 
+  9000002 9.118760e+01 # ghz : MZ 
+  9000003 7.982436e+01 # ghwp : MW 
+  9000004 7.982436e+01 # ghwm : MW 
+
+###################################
+## INFORMATION FOR SMINPUTS
+###################################
+Block sminputs 
+    1 1.279000e+02 # aEWM1 
+    2 1.166370e-05 # Gf 
+    3 1.184000e-01 # aS (Note that Parameter not used if you use a PDF set) 
+
+###################################
+## INFORMATION FOR YUKAWA
+###################################
+Block yukawa 
+    5 4.700000e+00 # ymb 
+    6 1.720000e+02 # ymt 
+   15 1.777000e+00 # ymtau 
+
+###################################
+## INFORMATION FOR YUKS1TRR
+###################################
+Block yuks1trr 
+    1   1 1.000000e-01 # yRR1x1 
+    1   2 1.000000e-01 # yRR1x2 
+    1   3 1.000000e-01 # yRR1x3 
+    2   1 1.000000e-01 # yRR2x1 
+    2   2 1.000000e-01 # yRR2x2 
+    2   3 1.000000e-01 # yRR2x3 
+    3   1 1.000000e-01 # yRR3x1 
+    3   2 1.000000e-01 # yRR3x2 
+    3   3 1.000000e-01 # yRR3x3 
+
+###################################
+## INFORMATION FOR DECAY
+###################################
+DECAY   6 1.508336e+00 # WT 
+DECAY  23 2.495200e+00 # WZ 
+DECAY  24 2.085000e+00 # WW 
+DECAY  25 4.070000e-03 # WH 
+DECAY 9000005 1.293134e+01 # WS1t 
+## Dependent parameters, given by model restrictions.
+## Those values should be edited following the 
+## analytical expression. MG5 ignores those values 
+## but they are important for interfacing the output of MG5
+## to external program such as Pythia.
+DECAY  1 0.000000e+00 # d : 0.0 
+DECAY  2 0.000000e+00 # u : 0.0 
+DECAY  3 0.000000e+00 # s : 0.0 
+DECAY  4 0.000000e+00 # c : 0.0 
+DECAY  5 0.000000e+00 # b : 0.0 
+DECAY  11 0.000000e+00 # e- : 0.0 
+DECAY  12 0.000000e+00 # ve : 0.0 
+DECAY  13 0.000000e+00 # mu- : 0.0 
+DECAY  14 0.000000e+00 # vm : 0.0 
+DECAY  15 0.000000e+00 # ta- : 0.0 
+DECAY  16 0.000000e+00 # vt : 0.0 
+DECAY  21 0.000000e+00 # g : 0.0 
+DECAY  22 0.000000e+00 # a : 0.0 
+DECAY  9000002 2.495200e+00 # ghz : WZ 
+DECAY  9000003 2.085000e+00 # ghwp : WW 
+DECAY  9000004 2.085000e+00 # ghwm : WW 
+#===========================================================
+# QUANTUM NUMBERS OF NEW STATE(S) (NON SM PDG CODE)
+#===========================================================
+
+Block QNUMBERS 9000001  # gha 
+        1 0  # 3 times electric charge
+        2 1  # number of spin states (2S+1)
+        3 1  # colour rep (1: singlet, 3: triplet, 8: octet)
+        4 1  # Particle/Antiparticle distinction (0=own anti)
+Block QNUMBERS 9000002  # ghz 
+        1 0  # 3 times electric charge
+        2 1  # number of spin states (2S+1)
+        3 1  # colour rep (1: singlet, 3: triplet, 8: octet)
+        4 1  # Particle/Antiparticle distinction (0=own anti)
+Block QNUMBERS 9000003  # ghwp 
+        1 3  # 3 times electric charge
+        2 1  # number of spin states (2S+1)
+        3 1  # colour rep (1: singlet, 3: triplet, 8: octet)
+        4 1  # Particle/Antiparticle distinction (0=own anti)
+Block QNUMBERS 9000004  # ghwm 
+        1 -3  # 3 times electric charge
+        2 1  # number of spin states (2S+1)
+        3 1  # colour rep (1: singlet, 3: triplet, 8: octet)
+        4 1  # Particle/Antiparticle distinction (0=own anti)
+Block QNUMBERS 82  # ghg 
+        1 0  # 3 times electric charge
+        2 1  # number of spin states (2S+1)
+        3 8  # colour rep (1: singlet, 3: triplet, 8: octet)
+        4 1  # Particle/Antiparticle distinction (0=own anti)
+Block QNUMBERS 9000005  # s1tm43 
+        1 -4  # 3 times electric charge
+        2 1  # number of spin states (2S+1)
+        3 3  # colour rep (1: singlet, 3: triplet, 8: octet)
+        4 1  # Particle/Antiparticle distinction (0=own anti)
