@@ -2,4 +2,4 @@
 
 Output files for Leptoquark studies at Northeastern University
 
-To view file outputs, open <Process_Name>/index.html
+To view file outputs, goto: http://htmlpreview.github.io/?https://github.com/nickh2000/LQ_Research/<<<<<process_name>>>/index.html
