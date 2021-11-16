@@ -1,12 +1,12 @@
-lhapdf=
+lhapdf=/home/nick/Desktop/LQ_Research/mg_root/HEPTools/lhapdf6_py3/bin/lhapdf-config
+lhapdfversion=6
+lhapdfsubversion=3
+lhapdf_config=/home/nick/Desktop/LQ_Research/mg_root/HEPTools/lhapdf6_py3/bin/lhapdf-config
 PYTHIA8_PATH=/home/nick/Desktop/LQ_Research/mg_root/HEPTools/pythia8
 MG5AMC_VERSION=3.2.0
 GLOBAL_FLAG=-O
 ALOHA_FLAG=
 MATRIX_FLAG=
-lhapdfversion=6
-lhapdfsubversion=3
-lhapdf_config=/home/nick/Desktop/LQ_Research/mg_root/HEPTools/lhapdf6_py3/bin/lhapdf-config
 DEFAULT_CPP_COMPILER=g++
 MACFLAG=
 STDLIB=-lstdc++
